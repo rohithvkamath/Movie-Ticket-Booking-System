@@ -11,7 +11,7 @@ if (isset($_POST['but_logout'])) {
     session_destroy();
     header('Location: index.php');
 }
-
+//this is new line
 ?>
 <!DOCTYPE html>
 <html lang="en">
