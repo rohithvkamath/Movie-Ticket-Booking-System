@@ -19,6 +19,13 @@
 }
 
 /* Footer Styling */
+body {
+  background: url("../img/cinema-image.jpg"); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+justify-content: center;
+}
 
 footer {
   display: grid;
@@ -165,7 +172,6 @@ footer {
   height: 100%;
   width: 100%;
   opacity: 0;
-  
   transition: 0.7s ease;
   background-color: rgb(0, 0, 0);
 }
@@ -175,26 +181,43 @@ footer {
 }
 
 .movie-info > h3 {
-  padding: 30px 0;
   color: #fff;
+  padding-bottom: 20%;
 }
 
 .movie-info > a {
-  display: inline-block;
-  padding: 0.35em 1.2em;
-  border: 0.1em solid #ffffff;
-  border-radius: 0.13em;
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
   box-sizing: border-box;
-  text-decoration: none;
-  font-weight: 300;
-  color: #ffffff;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
   text-align: center;
-  transition: all 0.2s;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.movie-info > a:hover {
-  color: #000000;
-  background-color: #ffffff;
+.movie-info> a:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .movie-info > a  {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
 }
 
 /* Trailers Section */
@@ -350,34 +373,35 @@ footer {
   display: grid;
   grid-gap: 25px;
   grid-template-columns: 1fr 3fr;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, .4);
   padding: 40px;
-  box-shadow: 1px 0px 23px 3px rgba(0, 0, 0, 0.45);
-  -webkit-box-shadow: 1px 0px 23px 3px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: 1px 0px 23px 3px rgba(0, 0, 0, 0.45);
   transition: all 0.7s ease;
   width: 90%;
   height: 100vh;
   margin: 0 auto;
+  
 }
 
 .booking-panel-section1 {
+  color: white;
+  width:350%;
 }
 
 .booking-panel-section2 {
+  margin-left: 95%;
+  width:40px;
 }
 
 .booking-panel-section2 > i {
-  background-color: #b6b6b6;
   color: #fff;
   padding: 15px;
   float: right;
-  cursor: pointer;
+  text-align: center;
   transition: all 0.5s ease;
 }
 
 .booking-panel-section2 > i:hover {
-  color: rgb(139, 139, 139);
+  transform: rotate(45deg);
 }
 
 .booking-panel-section3 > .movie-box {
@@ -395,13 +419,13 @@ footer {
 
 .booking-panel-section4 {
   border-radius: 10px;
-  border: 1px #6e5a11 solid;
-  background-color: #fff;
+  border: 1px white solid;
+  background-color: rgba(0, 0, 0, .6);
 }
 
 .booking-panel-section4 > .title {
-  border-bottom: #969696 1px solid;
-  color: #6e5a11;
+  border-bottom: white 1px solid;
+  color: white;
   padding: 0 0 15px 0;
   margin: 0 0 15px 0;
   font-size: 24pt;
@@ -416,17 +440,17 @@ footer {
 .movie-information td {
   padding: 8px 25px 8px 0;
   text-align: left;
-  color: #969696;
+  color: white;
 }
 
 .movie-information table tr td:first-child {
-  color: #585858;
+  color: white;
   font-weight: bold;
 }
 
 .booking-form-container {
-  background-color: #6e5a11;
-  width: 100%;
+  background-color:	rgba(0,0,0,0.8) ;
+  width: 95%;
   padding: 25px;
   margin: 20px 0;
 }
@@ -435,6 +459,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  color:rgba(255,255,255,.4);
   align-items: center;
 }
 
@@ -446,7 +471,7 @@ footer {
   float: right;
   width: 25%;
   text-align: center;
-  background-color: #a3861e;
+  background-color: #3F0D12;
   color: #fff;
   transition: all 0.7s ease;
   cursor: pointer;
@@ -454,7 +479,7 @@ footer {
 }
 
 .booking-form-container form button:hover {
-  background-color: #b6b6b6;
+  background-color: #C62128;
 }
 
 .booking-form-container form select {
@@ -463,7 +488,7 @@ footer {
   /* Firefox */
   -webkit-appearance: none;
   /* Safari and Chrome */
-  background: #fff url("#") no-repeat calc(100% - 10px) 50%;
+  background: #F0EAD6 url("#") no-repeat calc(100% - 10px) 50%;
   /* custom arrow set as a background */
   background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE1cHgiIGhlaWdodD0iOHB4IiB2aWV3Qm94PSIwIDAgMTUgOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTUgOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+ICA8cGF0aCBmaWxsPSIjODk4OTg5IMKgIiBkPSJNMS4wMywwLjE3NWMtMC4yMzYtMC4yMzMtMC42MTgtMC4yMzMtMC44NTQsMGMtMC4yMzUsMC4yMzItMC4yMzYsMC42MSwwLDAuODQybDYuODk3LDYuODA5ICAgIGMwLjIzNiwwLjIzMywwLjYxOCwwLjIzMywwLjg1NCwwbDYuODk3LTYuODA5YzAuMjM2LTAuMjMzLDAuMjM2LTAuNjEsMC0wLjg0MmMtMC4yMzYtMC4yMzMtMC42MTgtMC4yMzMtMC44NTQsMEw3LjUsNi4zODQgICAgTDEuMDMsMC4xNzV6Ii8+ICA8L3N2Zz4=);
   box-sizing: border-box;
@@ -481,6 +506,7 @@ footer {
 
 .booking-form-container form input {
   border-radius: 4px;
+  background-color: #F0EAD6;
   border: 1px solid #6e6e6e;
   padding: 10px;
   width: 31%;
