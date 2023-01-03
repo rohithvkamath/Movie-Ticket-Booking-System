@@ -20,7 +20,8 @@
 
 /* Footer Styling */
 body {
-  background: url("../img/cinema-image.jpg"); 
+  background-image: url("../img/cinema-image.jpg");
+
   background-size: cover;
   background-attachment: fixed;
   background-repeat:no-repeat;
@@ -401,7 +402,7 @@ footer {
 }
 
 .booking-panel-section2 > i:hover {
-  transform: rotate(45deg);
+  transform: rotate(90deg);
 }
 
 .booking-panel-section3 > .movie-box {
@@ -450,7 +451,7 @@ footer {
 
 .booking-form-container {
   background-color:	rgba(0,0,0,0.8) ;
-  width: 95%;
+  width: 85%;
   padding: 25px;
   margin: 20px 0;
 }

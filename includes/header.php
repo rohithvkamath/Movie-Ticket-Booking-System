@@ -50,7 +50,7 @@ text-decoration:none;
 		}
 		.menu-bar li:hover {
 				color: black;
-                background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+        background: linear-gradient(to bottom, #e8edec, #d2d1d3);
             
 		}
         .navibar{
@@ -168,60 +168,38 @@ span.psw {
      width: 100%;
   }
 }
+#disname:hover{
+  background:rgba(0,0,0,0);
+  color:white;
+  cursor:default;
+}
 </style>
 </head>
 <body>
-<nav class="navibar">
-<ul class="menu-bar">
-  <a href="index.php"><li>Home</li></a>
+<?php
+include '../connection.php';
+
+echo '<nav class="navibar">
+<ul class="menu-bar">';
+if(isset($_SESSION['user_name'])){
+  echo "<li id='disname'> Hi! "; echo $_SESSION['user_name']; echo"</li>";
+}
+  echo '<a href="index.php"><li>Home</li></a>
   <li>Now Showing</li>
   <li>TV Shows</li>
   <li>Sports</li>
-  <li>Review</li>
-  <li onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</li>
+  <li>Review</li>';
+if(isset($_SESSION['user_name'])){
+  echo "<a href='logout.php'><li>LogOut</li></a>";
+}
+else{
+  echo "<a href='login.php'><li>Login</li></a>";
+}
+?>
+
+
 </ul>
 </nav>
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img/avatar.png" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
-
-<script>
-
-        // Get the modal
-        var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 </script>
 
 </body>
