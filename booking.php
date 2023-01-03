@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<?php 
+include 'connection.php';
+if (isset($_SESSION['user_name'])) {
+
+?>
+
 <?php
 $id = $_GET['id'];
 //conditions
 if ((!$_GET['id'])) {
     echo "<script>alert('You are Not Suppose to come Here Directly');window.location.href='index.php';</script>";
 }
-include "connection.php";
 $movieQuery = "SELECT * FROM movieTable WHERE movieID = $id";
 $movieImageById = mysqli_query($con, $movieQuery);
 $row = mysqli_fetch_array($movieImageById);
@@ -26,6 +32,8 @@ $row = mysqli_fetch_array($movieImageById);
 <body>
 
 <header></header>
+
+
     <div class="booking-panel">
         <div class="booking-panel-section booking-panel-section1">
             <h1>RESERVE YOUR TICKET</h1>
@@ -120,7 +128,12 @@ $row = mysqli_fetch_array($movieImageById);
             </div>
         </div>
     </div>
-
+<?php 
+}else {   
+    header ("Location: login.php");
+    exit();        
+}
+ ?>
     <script src="scripts/jquery-3.3.1.min.js "></script>
     <script src="scripts/script.js "></script>
     <script>
