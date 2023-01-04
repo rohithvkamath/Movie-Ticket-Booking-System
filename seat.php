@@ -20,6 +20,7 @@
   flex-direction: column;
   width:85%;
   left:10%;
+  padding:25px 0px;
 }
 
 
@@ -28,10 +29,11 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   border: 0;
-  padding: 5px 15px;
+  padding: 7px 15px;
   margin-bottom: 40px;
   font-size: 14px;
   border-radius: 5px;
+  margin-top:25px;
 }
 
 .container {
@@ -127,17 +129,47 @@ p.text span {
 .credits a {
   color: #fff;
 }
+.btn-pay{
+  height: 50px;
+  width: 250px;
+  position: relative;
+  background: white;
+  border-radius: 5px;
+}
+.btn-pay:hover{
+  background:black;
+
+}
+
+.btn-pay input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: black;
+  padding-left: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-pay input[type="submit"]:hover{
+  color:white;
+}
 
 </style>
 <body>
     <header></header>
 <div class="movie-container">
-  <label>Pick a movie: </label>
+  <label>Select the Time </label>
   <select id="movie">
-    <option value="250">Interstellar (Rs. 250)</option>
-    <option value="200">Kabir Singh (Rs. 200)</option>
-    <option value="150">Duniyadari (Rs. 150)</option>
-    <option value="100">Natsamrat (Rs. 100)</option>
+    <option value="250">09:00</option>
+    <option value="250">12:00</option>
+    <option value="250">14:00</option>
+    <option value="250">18:00</option>
+    <option value="250">21:00</option>
   </select>
   
   <ul class="showcase">
@@ -222,6 +254,9 @@ p.text span {
     <p class="text">
       You have selected <span id="count">0</span> seats for the total price of Rs. <span id="total">0</span>
     </p>
+  </div>
+  <div class='btn-pay'>
+    <input type="submit" value="Make Payment" name='payment'>
   </div>
 </div>
 

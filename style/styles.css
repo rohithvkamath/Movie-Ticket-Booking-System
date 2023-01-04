@@ -520,13 +520,14 @@ footer {
 .schedule-section {
   width: 80%;
   margin: 0 auto;
+  background-color: rgba(0,0,0,0.6);
 }
 
 .schedule-section > h1 {
   padding: 0 0 20px 0;
   margin: 0 0 40px 0;
-  border-bottom: 1px solid #bdbdbd;
-  color: #6e5a11;
+  border-bottom: 1px solid white;
+  color: white;
 }
 
 .schedule-dates {
@@ -537,7 +538,7 @@ footer {
 
 .schedule-item {
   padding: 15px;
-  background-color: #6e5a11;
+  background-color: black;
   margin-right: 10px;
   color: #fff;
   cursor: pointer;
@@ -545,13 +546,13 @@ footer {
 }
 
 .schedule-item:hover {
-  background-color: #b6b6b6;
-  color: #6e5a11;
+  background-color: black;
+  color: white;
 }
 
 .schedule-item-selected {
-  color: #6e5a11;
-  background-color: #b6b6b6;
+  color: black;
+  background-color: white;
   cursor: auto;
 }
 
@@ -562,9 +563,9 @@ footer {
 
 .schedule-table table tr th {
   padding: 10px 0 10px 40px;
-  background-color: #6e5a11;
+  background-color: white;
   border: 1px solid #b6b6b6;
-  color: #fff;
+  color: black;
 }
 
 .schedule-table table tr th:first-child {
@@ -613,6 +614,9 @@ footer {
   cursor: auto;
 }
 
+.fade-scroll{
+  color: white;
+}
 /* Contact Us Styling */
 
 #gmap_canvas {
