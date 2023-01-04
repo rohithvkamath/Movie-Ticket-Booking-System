@@ -41,31 +41,31 @@ if (!isset($_SESSION['uname'])) {
             <div class="admin-section-column">
                 <div class="admin-section-panel admin-section-stats">
                     <div class="admin-section-stats-panel">
-                        <i class="fa fa-ticket-alt" style="background-color: #cf4545"></i>
-                        <h2 style="color: #cf4545"><?php echo $bookingsNo ?></h2>
+                        <i class="fa fa-ticket-alt" style="background-color: black"></i>
+                        <h2 style="color: black"><?php echo $bookingsNo ?></h2>
                         <h3>Bookings</h3>
                     </div>
                     <div class="admin-section-stats-panel">
-                        <i class="fas fa-film" style="background-color: #4547cf"></i>
-                        <h2 style="color: #4547cf"><?php echo $moviesNo ?></h2>
+                        <i class="fas fa-film" style="background-color: black;"></i>
+                        <h2 style="color: black;"><?php echo $moviesNo ?></h2>
                         <h3>Movies</h3>
                     </div>
                     <div class="admin-section-stats-panel">
-                        <i class="fas fa-users" style="background-color: #000000"></i>
+                        <i class="fas fa-users" style="background-color: black"></i>
                         <!--<i class="fas fa-ticket-alt"></i>-->
-                        <h2 style="color: #bb3c95"><?php echo $userNo ?></h2>
+                        <h2 style="color:black"><?php echo $userNo ?></h2>
                         <h3>Users</h3>
                     </div>
                     <div class="admin-section-stats-panel" style="border: none">
-                        <i class="fas fa-envelope" style="background-color: #3cbb6c"></i>
-                        <h2 style="color: #3cbb6c"><?php echo $messagesNo ?></h2>
+                        <i class="fas fa-envelope" style="background-color: black"></i>
+                        <h2 style="color: black"><?php echo $messagesNo ?></h2>
                         <h3>Messages</h3>
                     </div>
                 </div>
                 <div class="admin-section-panel admin-section-panel1">
                     <div class="admin-panel-section-header">
                         <h2>Recent Bookings</h2>
-                        <i class="fas fa-ticket-alt" style="background-color: #cf4545"></i>
+                        <i class="fas fa-ticket-alt" style="background-color: black"></i>
                     </div>
                     <div class="admin-panel-section-content">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
