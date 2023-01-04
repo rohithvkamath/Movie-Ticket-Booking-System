@@ -185,10 +185,9 @@ if(isset($_SESSION['user_name'])){
   echo "<li id='disname'> Hi! "; echo $_SESSION['user_name']; echo"</li>";
 }
   echo '<a href="index.php"><li>Home</li></a>
-  <li>Now Showing</li>
-  <li>TV Shows</li>
-  <li>Sports</li>
-  <li>Review</li>';
+  <a href="booknow.php"><li>Book Now</li></a>
+  <li>About Us</li>
+  <li>Contact Us</li>';
 if(isset($_SESSION['user_name'])){
   echo "<a href='logout.php'><li>LogOut</li></a>";
 }
